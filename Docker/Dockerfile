@@ -7,8 +7,8 @@ COPY . ./
 RUN npm run build
 
 # ready for production
-WORKDIR /myapp
 FROM node:latest
+WORKDIR /myapp
 COPY --from=build-stage /app /myapp
 EXPOSE 3000
-CMD ["ls"]
+CMD ["npm", "start"]
