@@ -35,6 +35,6 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USER }}/EGT:${{github.sha}}
-            ${{ secrets.DOCKERHUB_USER }}/EGT:latest
+            ${{ secrets.DOCKERHUB_USER }}/egt:${{github.sha}}
+            ${{ secrets.DOCKERHUB_USER }}/egt:latest
       
