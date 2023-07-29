@@ -11,4 +11,4 @@ WORKDIR /myapp
 FROM node:latest
 COPY --from=build-stage /app /myapp
 EXPOSE 3000
-ENTRYPOINT ["npm", "start"]
+CMD ["ls"]
