@@ -6,7 +6,8 @@ RUN npm install
 COPY . ./
 RUN npm run build
 
-# ready for production 
+# ready for production
+WORKDIR /myapp
 FROM node:latest
 COPY --from=build-stage /app/build /myapp
 EXPOSE 3000
